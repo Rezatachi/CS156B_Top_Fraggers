@@ -23,4 +23,4 @@ def histogram_of_oriented_gradients(filename):
     plt.show()
     return fd, hog_image
 
-histogram_of_oriented_gradients('view2_lateral.jpg')
+histogram_of_oriented_gradients('view2_frontal.jpg')
