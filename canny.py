@@ -31,7 +31,7 @@ def canny(folder, desired_path):
                 im = cv2.resize(im, (224,224))
                 im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
                 im_gray = cv2.GaussianBlur(im_gray, (5,5), 0)
-                _, threshold = cv2.threshold(im_gray, 130, 190, 0)
+                _, threshold = cv2.threshold(im_gray, 130, 190, 0) #THRESHOLD!
                 edges = cv2.Canny(threshold, 100, 255)
                 cv2.imwrite(file, edges)
                 shutil.move(file, f"{desired_path}/{root}/{d}")
